@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SearchMovieFragment">
+    <fragment
+        android:id="@+id/SearchMovieFragment"
+        android:name="com.projectnaver.projectNaver.SearchMovie_fragment"
+        android:label="MovieSearch"
+        tools:layout="@layout/search_movie_fragment">
+        <action
+            android:id="@+id/action_SearchMovieFragment_to_RecentSearch"
+            app:destination="@id/RecentSearch" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RecentSearch"
+        android:name="com.projectnaver.projectNaver.RecentSearch_fragment"
+        android:label="RecentSearch"
+        tools:layout="@layout/recent_fragment">
+        <action
+            android:id="@+id/action_RecentSearch_to_SearchMovieFragment"
+            app:destination="@id/SearchMovieFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/search_movie"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"/>
+        <Button
+            android:id="@+id/serach_movie_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/search_movie"
+            android:text="검색"
+            android:backgroundTint="#A4A4A4"/>
+        <Button
+            android:id="@+id/recent_serch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최근검색"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/serach_movie_btn"
+            android:backgroundTint="#A4A4A4"/>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
